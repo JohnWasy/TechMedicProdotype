@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMedic</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #5a5a5a; /* Larger change in background color */
+        }
+        section {
+            padding: 20px;
+            display: none; /* Initially hide all sections */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // JavaScript to handle navigation within the single-page application
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            // Function to show the selected section and hide others
+            function showSection(sectionId) {
+                sections.forEach(function(section) {
+                    if (section.id === sectionId) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            }
+
+            // Show the Home section by default
+            showSection("home");
+
+            // Event listener for each navigation link
+            navLinks.forEach(function(navLink) {
+                navLink.addEventListener("click", function() {
+                    const sectionId = this.getAttribute("data-section-id");
+                    showSection(sectionId);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>TechMedic</h1>
+        <p>Your go-to destination for all things tech in medicine</p>
+    </header>
+    <nav>
+        <a href="#" data-section-id="home">Home</a>
+        <a href="#" data-section-id="about">About</a>
+        <a href="#" data-section-id="services">Services</a>
+        <a href="#" data-section-id="contact">Contact</a>
+        <a href="#" data-section-id="costs">Costs</a>
+        <a href="#" data-section-id="opened">Opened</a>
+        <a href="#" data-section-id="donate">Donate Now</a>
+        <a href="#" data-section-id="members">Our Members</a>
+        <a href="#" data-section-id="rate">Rate Us</a>
+        <a href="#" data-section-id="survey">Client Survey</a>
+        <a href="#" data-section-id="agreement">Computer Service Agreement</a>
+    </nav>
+    <section id="home">
+        <h2>Welcome to TechMedic</h2>
+        <p>TechMedic is dedicated to providing you with the latest news, advancements, and resources in the intersection of technology and medicine.</p>
+        <p>This is a work in progress, private website. Will be public on github soon.</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is the About Us section. Here you can learn more about our mission, vision, and values.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Discover the range of services we offer to help you stay at the forefront of healthcare technology.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us to learn more about our offerings or to collaborate on projects.</p>
+    </section>
+    <section id="costs">
+        <h2>Costs</h2>
+        <p>Explore our pricing options for various services and solutions.</p>
+    </section>
+    <section id="opened">
+        <h2>Opened</h2>
+        <p>Learn about our operating hours and when we're available to assist you.</p>
+    </section>
+    <section id="donate">
+        <h2>Donate Now</h2>
+        <p>Support our cause by making a donation to help us continue our work.</p>
+    </section>
+    <section id="members">
+        <h2>Our Members</h2>
+        <p>Meet the team and individuals behind TechMedic.</p>
+    </section>
+    <section id="rate">
+        <h2>Rate Us</h2>
+        <p>Share your feedback and rate our services.</p>
+    </section>
+    <section id="survey">
+        <h2>Client Survey</h2>
+        <p>Take our survey to help us improve our services.</p>
+    </section>
+    <section id="agreement">
+        <h2>Computer Service
